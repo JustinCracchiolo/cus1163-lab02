@@ -1,5 +1,6 @@
 #include "proc_reader.h"
 
+
 int list_process_directories(void) {
     DIR* dir = opendir("/proc");
     if (!dir) {
@@ -7,7 +8,6 @@ int list_process_directories(void) {
        return -1;
     }
     
-
     struct dirent* entry;
     int count = 0;
     printf("Process directories in /proc:\n");
